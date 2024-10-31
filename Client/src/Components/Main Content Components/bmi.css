@@ -1,0 +1,115 @@
+.bmi-calculator {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: #c2dea3;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+  
+.bmi-calculator h2 {
+    font-size: 1.8em;
+    color: #353d2f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.bmi-calculator h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 30px;
+    text-align: center;
+}
+  
+.bmi-calculator input {
+    width: 94%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    font-size: 1em;
+    background-color: #d7e8c4;
+}
+  
+.bmi-calculator input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+  
+.bmi-calculator button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4ca850;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.bmi-calculator button:hover {
+    background-color: #3c8440;
+}
+  
+.bmi-calculator .bmi-result {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e6f4ff;
+    border-left: 5px solid #4a90e2;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}
+  
+.bmi-calculator .bmi-history {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+  
+.bmi-calculator .bmi-history li {
+    padding: 10px;
+    background-color: #d7e8c4;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95em;
+    margin-top: 8px;
+}
+  
+.bmi-calculator .bmi-history li:last-child {
+    border-bottom: none;
+}
+  
+.bmi-calculator .bmi-history li span {
+    font-weight: bold;
+    color: #333;
+}
+  
+.bmi-calculator .bmi-history li time {
+    color: #666;
+    font-size: 0.85em;
+}
+  
+.delete-history-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #e57373;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  

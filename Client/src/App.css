@@ -1,0 +1,370 @@
+/* MAIN CSS APP.CSS */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#mainPage {
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange children in a column */
+    height: 100vh; /* Full height of the viewport */
+}
+
+
+#content {
+    flex: 1; /* Allow this to take the remaining space */
+    padding: 0;
+    margin: 0;
+    overflow: auto; /* Handle overflow if content is larger than the container */
+    background: rgb(223,227,186);
+    background: linear-gradient(180deg, rgba(223,227,186,1) 0%, rgba(201,223,176,1) 50%, rgba(223,227,186,1) 100%);
+}
+/* Landing.css */
+.landing-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make it full viewport height */
+    overflow: hidden;
+}
+
+  
+/* .welcome-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    /* color: white;
+    font-size: 2rem; /* Adjust the font size as needed */
+    /* z-index: 1; Ensure the text appears over the Spline scene */
+/* }  */
+  
+.landing-container canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    
+}
+
+
+
+/* NAVBAR */
+.Navbar {
+    /* background: rgb(200,188,176);
+    background: linear-gradient(180deg, rgba(200,188,176,1) 0%, rgba(254,227,203,1) 64%); */
+    padding:  8px;
+    background: rgb(149,161,148);
+    background: linear-gradient(180deg, rgba(149,161,148,1) 0%, rgba(223,227,186,1) 47%);
+    height: 6vh; /* Fixed height */
+    border-bottom: 2px solid #555; /* Adds a bottom border */
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-navbar{
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+.logout-btn{
+    background-color: #dfe3ba;
+    color: inherit;
+    border: none;
+    font-size: large;
+    margin-right: 5px;
+}
+
+.logout-btn:hover{
+    cursor: pointer;
+    
+}
+
+.btn-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-nav .special {
+    margin-right: 15px;
+}
+
+.Navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+.Navbar a {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Ensures the link takes the text color of its parent */
+    font-size: large;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Navbar a:hover {
+     /* Optional: Adds underline on hover */
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* footer */
+.footer {
+    /* background: rgb(254,227,203);
+    background: linear-gradient(180deg, rgba(254,227,203,1) 0%, rgba(200,188,176,1) 49%); */
+    background: rgb(223,227,186);
+    background: linear-gradient(180deg, rgba(223,227,186,1) 15%, rgba(149,161,148,1) 100%);
+    height: 6vh; /* Fixed height */
+    padding: 8px;
+    margin: 0;
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border-top: 2px solid #555;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin to ensure proper centering */
+    text-align: center; /* Center text inside the p tag */
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Card Styling LOGIN SECTION */
+#loginCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 300px;
+    background-color: #c2dea3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#loginCard input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #d7e8c4;
+}
+
+#loginCard h1{
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.button-link{
+    color: white;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    padding-left: 5vw;
+    padding-right:5vw;
+}
+.button-link:hover{
+    color: black;
+}
+#loginCard button{
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background-color: #4ca850;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+#loginCard button:hover {
+    background-color: #439547;
+    color: black;
+}
+#loginCard a {
+    text-decoration: none;   
+}
+.proceed-here{
+    
+    color: #555;
+}
+#loginCard li {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+
+/* SIGN UP CARD */
+/* Card Styling */
+#signupCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 300px;
+    background-color: #c2dea3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#signupCard input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #d7e8c4;
+}
+#signupCard button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+#signupCard button:hover {
+    background-color: #45a049;
+}
+
+#signupCard h1{
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+#signupCard li {
+    list-style: none;
+    margin-top: 1rem;
+}
+#signupCard li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+
+/* MAIN CONTENT SECTION INCLUDES - SIDEBAR AND THE SCREEN  */
+
+/* Main content area in Home component */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh; /* Ensure the content fills the screen height */
+    background: rgb(223,227,186);
+    background: linear-gradient(180deg, rgba(223,227,186,1) 0%, rgba(201,223,176,1) 50%, rgba(223,227,186,1) 100%);
+}
+/* Sidebar styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    height: 100%; /* Adjust height to fit the layout */
+    width: 50px; /* Collapsed width */
+    background-color: #cec9ac; /* Sidebar background color */
+    padding: 10px 0; /* Padding for the sidebar */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+/* Top section with logo and toggle icon */
+.top_section {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between logo and toggle */
+    width: 90%;
+    padding: 10px; /* Padding around the top section */
+}
+
+.logo {
+    font-size: 1.5rem; /* Larger font for logo */
+    font-weight: bold; /* Bold text */
+    color: #2c3e50; /* Dark color for logo */
+    display: none; /* Hidden when collapsed */
+    margin-right: 0px;
+}
+
+.bars {
+    cursor: pointer; /* Pointer cursor for toggle icon */
+    font-size: 1.5rem; /* Increase icon size */
+    color: #2c3e50; /* Icon color */
+}
+.icon{
+    margin-left:20px ;
+}
+
+/* Sidebar links */
+.link {
+    width: 100%; /* Full width for links */
+    display: flex; /* Flex for alignment */
+    align-items: center; /* Center items */
+    padding: 15px 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    color: #353d2f; /* Text color */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    border: none;
+    background-color: #cec9ac;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    margin: 5px 0; /* Space between links */
+    cursor: pointer; /* Cursor pointer for links */
+}
+
+/* Ensure text and icon align properly */
+.link .icon {
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Ensure the link text does not wrap */
+.link_text {
+    display: inline; /* Always display text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover effect for links */
+.link:hover {
+    background-color: #9e726966; /* Light blue on hover */
+    /* color: wheat; Darker text on hover */
+}
+
+/* Optional responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height */
+    }
+}
+
+
+
+
