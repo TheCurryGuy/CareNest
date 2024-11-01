@@ -16,7 +16,7 @@ app.use(cors({
 
 app.use("/user", userRouter)
 app.get("/", (req, res) => {
-  console("Welcome to the server")
+
   res.json({
       message: "Server running"
   })
