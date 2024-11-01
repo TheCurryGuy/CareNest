@@ -10,7 +10,7 @@ export default function Signup() {
 
   async function Signup() {
     try {
-      const response = await axios.post('http://localhost:3000/user/signup', {
+      const response = await axios.post('https://thecurryguy.vercel.app/user/signup', {
         username: username.current.value,
         password: password.current.value,
         firstName: firstName.current.value,
