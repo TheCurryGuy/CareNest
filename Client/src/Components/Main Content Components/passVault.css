@@ -36,6 +36,7 @@ input {
     padding: 10px; /* Padding for inputs */
     transition: border-color 0.3s; /* Transition for border */
     margin-right: 8px;
+    background-color: #d7e8c4;
 }
 
 input:focus {
@@ -75,7 +76,7 @@ button:hover {
     margin: 10px; /* Space around cards */
     border-radius: 10px;
     padding: 15px; /* Padding for content */
-    background-color: #f9f9f9; /* Light background for credentials */
+    background-color: #cec9a7; /* Light background for credentials */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
     transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
 }

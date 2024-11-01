@@ -99,7 +99,7 @@ const PassVault = () => {
                 />
                 <button type="submit">Save</button>
             </form>
-            <h3 style={{marginTop: "5px"}}>Stored Credentials :</h3>
+            <h3 style={{marginTop: "5px", marginBottom: "5px"}}>Stored Credentials :</h3>
             <div className="credentials-list">
                 {credentials.length > 0 ? (
                     credentials.map(cred => {
