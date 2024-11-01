@@ -9,6 +9,14 @@ const { userMiddleware } = require("../middleware/userAuth");
 
 const userRouter = Router();
 
+
+userRouter.post("/", (req, res) => {
+    console("Welcome to the server")
+    res.json({
+        message: "Server running"
+    })
+})
+
 userRouter.post("/signup", async (req, res)=> {
     const { username, password, firstName, lastName } = req.body;
 
@@ -34,7 +42,6 @@ userRouter.post("/signup", async (req, res)=> {
         })
     }
 })
-
 
 userRouter.post("/signin", async (req,res)=> {
     const username = req.body.username;
@@ -69,31 +76,3 @@ userRouter.post("/signin", async (req,res)=> {
 module.exports = {
     userRouter : userRouter,// or simply the userRouter
 }
-
-// userRouter.get("/purchases", userMiddleware, async (req, res) => {
-//     const userId = req.userId
-//     const purchased = await purchaseModel.find({
-//         userId
-//     })
-//     /*
-//     let purchasedCourseIds = [];
-
-//     for (let i = 0; i<purchases.length;i++){ 
-//         purchasedCourseIds.push(purchases[i].courseId)
-//     }
-
-//     const coursesData = await courseModel.find({
-//         _id: { $in: purchasedCourseIds }
-//     })
-//     */ 
-//     const coursesData = await courseModel.find({
-//         _id: { $in: purchased.map(x => x.courseId) }
-//     })
-
-//     res.json({
-//         purchased,
-//         coursesData
-//     })
-
-// })
-
