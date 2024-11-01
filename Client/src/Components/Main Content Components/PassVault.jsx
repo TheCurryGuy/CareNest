@@ -99,8 +99,8 @@ const PassVault = () => {
                 />
                 <button type="submit">Save</button>
             </form>
+            <h3>Stored Credentials :</h3>
             <div className="credentials-list">
-                <h3>Stored Credentials :</h3>
                 {credentials.length > 0 ? (
                     credentials.map(cred => {
                         const decryptedPassword = CryptoJS.AES.decrypt(cred.password, SECRET_KEY).toString(CryptoJS.enc.Utf8);
