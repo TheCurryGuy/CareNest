@@ -109,7 +109,7 @@ const MediReminder = () => {
 const MedicationColumn = ({ title, medications = [], onDragStart, onDrop, onDelete }) => {
     return (
         <div className="box" onDragOver={(e) => e.preventDefault()} onDrop={onDrop}>
-            <h3 style={{ marginLeft: "20px" }}>{title}</h3>
+            <h3 style={{ marginLeft: "20px", marginTop: "10px" }}>{title}</h3>
             {medications.map((medication) => (
                 <div
                     key={medication.id}
