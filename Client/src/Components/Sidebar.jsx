@@ -6,15 +6,25 @@ import {
     FaCalculator,
     FaLock,
     FaMedapps,
-    FaUserAstronaut
+    FaUserAstronaut,
+    FaDoorOpen
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
+import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi } = useContext(StateContext);
+    const { isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi,isLogin, isLogout, setLogout, setLogin } = useContext(StateContext);
 
     const toggle = () => setIsOpen(!isOpen);
+    const navigate = useNavigate()
+  
+    function logOut(){
+        localStorage.removeItem('token')
+        setLogout(true)
+        setLogin(false)
+        navigate("/")
+    }
 
     function clickPost() {
         if (isPost) {
@@ -109,6 +119,10 @@ const Sidebar = ({ children }) => {
                 <button onClick={clickMedi} className="link">
                     <div className="icon"><FaMedapps /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medi Reminder</div>
+                </button>
+                <button onClick={logOut} className="link" style={{marginTop: "17vh"}}>
+                    <div className="icon"><FaDoorOpen/></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Log Out</div>
                 </button>
             </div>
             <main>{children}</main>

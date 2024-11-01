@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Signup() {
@@ -7,6 +7,7 @@ export default function Signup() {
   const password = useRef();
   const firstName = useRef();
   const lastName = useRef();
+  const navigate = useNavigate()
 
   async function Signup() {
     try {
@@ -17,6 +18,7 @@ export default function Signup() {
         lastName: lastName.current.value
       });
       alert('You are signed up: ' + response.data.message);
+      navigate("/")
     } catch (error) {
       console.error('Signup Error:', error);
       alert('Error signing up'+error);
