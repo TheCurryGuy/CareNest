@@ -117,7 +117,7 @@ const PassVault = () => {
                         );
                     })
                 ) : (
-                    <p>No credentials stored.</p>
+                    <p style={{marginRight: "50px"}}>No credentials stored.</p>
                 )}
             </div>
         </div>
