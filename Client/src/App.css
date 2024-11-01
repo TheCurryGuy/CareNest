@@ -11,7 +11,6 @@ body {
     height: 100vh; /* Full height of the viewport */
 }
 
-
 #content {
     flex: 1; /* Allow this to take the remaining space */
     padding: 0;
@@ -49,8 +48,6 @@ body {
     
 }
 
-
-
 /* NAVBAR */
 .Navbar {
     /* background: rgb(200,188,176);
@@ -76,7 +73,7 @@ body {
 
 
 .logout-btn{
-    background-color: #dfe3ba;
+    background-color: rgba(248, 235, 235, 0.1);
     color: inherit;
     border: none;
     font-size: large;
@@ -85,12 +82,14 @@ body {
 
 .logout-btn:hover{
     cursor: pointer;
+    background-color: rgba(248, 235, 235, 0.1);
     
 }
 
 .btn-nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .btn-nav .special {
@@ -152,6 +151,7 @@ body {
     align-items: center;
     padding: 2rem;
     width: 300px;
+    border: 0.1px solid #353d2f;
     background-color: #c2dea3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -229,6 +229,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 0.1px solid #353d2f;
 }
 #signupCard input {
     width: 100%;
@@ -294,6 +295,7 @@ body {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
     border-radius: 8px; /* Rounded corners */
     transition: width 0.3s ease; /* Smooth transition for width */
+    margin-right: 15px;
 }
 
 /* Top section with logo and toggle icon */

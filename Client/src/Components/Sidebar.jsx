@@ -1,12 +1,11 @@
 import React, { useState, useContext } from 'react';
 import {
-    FaTh,
     FaBars,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
+    FaAt,
+    FaListUl,
+    FaCalculator,
+    FaLock,
+    FaMedapps
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
 
@@ -87,28 +86,28 @@ const Sidebar = ({ children }) => {
                 </div>
                 
                 <button onClick={clickPost} className="link">
-                    <div className="icon"><FaTh /></div>
+                    <div className="icon"><FaAt /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">My Posts</div>
                 </button>
                 
                 <button onClick={clickTodo} className="link">
-                    <div className="icon"><FaUserAlt /></div>
-                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Todo App</div>
+                    <div className="icon"><FaListUl /></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">TaskBoard</div>
                 </button>
 
                 <button onClick={clickBMI} className="link">
-                    <div className="icon"><FaRegChartBar /></div>
+                    <div className="icon"><FaCalculator /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">BMI Calculator</div>
                 </button>
 
                 <button onClick={clickWatch} className="link">
-                    <div className="icon"><FaCommentAlt /></div>
-                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Stopwatch</div>
+                    <div className="icon"><FaLock /></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">PassVault</div>
                 </button>
 
                 <button onClick={clickMedi} className="link">
-                    <div className="icon"><FaShoppingBag /></div>
-                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medication Reminder</div>
+                    <div className="icon"><FaMedapps /></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medi Reminder</div>
                 </button>
             </div>
             <main>{children}</main>

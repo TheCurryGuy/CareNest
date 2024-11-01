@@ -5,11 +5,12 @@ import Sidebar from './Sidebar';
 import Post from './Main Content Components/Post';
 import Todo from './Main Content Components/Todo';
 import BMICal from './Main Content Components/BMI';
-import Stopwatch from './Main Content Components/Stopwatch';
+import PassVault from './Main Content Components/PassVault';
 import MediReminder from './Main Content Components/MediReminder';
+import Chatbot from './Chatbot';
 
 export default function Home() {
-    const { isPost, isTodo, isBMI, isWatch, isMedi } = useContext(StateContext);
+    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin } = useContext(StateContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
   
@@ -26,8 +27,9 @@ export default function Home() {
             {isPost && <Post/>}
             {isTodo && <Todo className = "todo-component"/>}
             {isBMI && <BMICal/>}
-            {isWatch && <Stopwatch/>}
+            {isWatch && <PassVault/>}
             {isMedi && <MediReminder/>}
+            {isLogin && <Chatbot/>}
       </div>
     );
   }
