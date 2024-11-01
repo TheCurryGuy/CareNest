@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 require("dotenv").config()
 
 const { userRouter } = require("./routes/user")
-const { adminRouter } = require("./routes/admin")
+
 
 const app = express()
 app.use(express.json())
@@ -15,7 +15,7 @@ app.use(cors({
 
 
 app.use("/user", userRouter)
-app.use("/admin", adminRouter)
+
 
 async function main(){
     //by doing this it ensures us that if the database connection fails then the server wont start onlyyy
