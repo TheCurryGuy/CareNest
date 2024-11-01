@@ -10,7 +10,7 @@ const { userMiddleware } = require("../middleware/userAuth");
 const userRouter = Router();
 
 
-userRouter.post("/", (req, res) => {
+userRouter.get("/", (req, res) => {
     console("Welcome to the server")
     res.json({
         message: "Server running"
