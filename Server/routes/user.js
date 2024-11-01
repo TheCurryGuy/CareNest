@@ -11,7 +11,6 @@ const userRouter = Router();
 
 
 userRouter.get("/", (req, res) => {
-    console("Welcome to the server")
     res.json({
         message: "Server running"
     })
