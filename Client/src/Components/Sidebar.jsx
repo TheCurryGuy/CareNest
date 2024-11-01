@@ -5,7 +5,8 @@ import {
     FaListUl,
     FaCalculator,
     FaLock,
-    FaMedapps
+    FaMedapps,
+    FaUserAstronaut
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
 
@@ -86,8 +87,8 @@ const Sidebar = ({ children }) => {
                 </div>
                 
                 <button onClick={clickPost} className="link">
-                    <div className="icon"><FaAt /></div>
-                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">My Posts</div>
+                    <div className="icon"><FaUserAstronaut /></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">AI Assistant</div>
                 </button>
                 
                 <button onClick={clickTodo} className="link">
