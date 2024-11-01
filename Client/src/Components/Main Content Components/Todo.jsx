@@ -122,7 +122,7 @@ const Todo = () => {
 const TodoColumn = ({ title, todos = [], onDragStart, onDrop, onDelete }) => {
     return (
         <div className="box" onDragOver={(e) => e.preventDefault()} onDrop={onDrop}>
-            <h3 style={{marginLeft: "20px"}}>{title}</h3>
+            <h3 style={{marginLeft: "20px", marginTop : "15px"}}>{title}</h3>
             {todos.map((todo) => (
                 <div
                     key={todo.id}
