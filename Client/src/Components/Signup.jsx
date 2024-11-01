@@ -34,7 +34,7 @@ export default function Signup() {
             <input ref={username} placeholder='Username' />
             <input ref={password} placeholder='Password' type="password" />
             <button onClick={Signup}>Sign up</button>
-            <li><Link to="/login">Login here</Link></li>
+            <li>Already have an account ?<Link to="/login">Login here</Link></li>
         </div>
         
     </>
