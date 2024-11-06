@@ -8,9 +8,10 @@ import BMICal from './Main Content Components/BMI';
 import PassVault from './Main Content Components/PassVault';
 import MediReminder from './Main Content Components/MediReminder';
 import Chatbot from './Chatbot';
+import About from './Main Content Components/About';
 
 export default function Home() {
-    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin } = useContext(StateContext);
+    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin, isAbout} = useContext(StateContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
   
@@ -24,6 +25,7 @@ export default function Home() {
     return (
       <div className='main-content'>
             <Sidebar/>
+            {isAbout && <About/>}
             {isPost && <Post/>}
             {isTodo && <Todo className = "todo-component"/>}
             {isBMI && <BMICal/>}

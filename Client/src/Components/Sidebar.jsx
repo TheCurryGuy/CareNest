@@ -7,14 +7,16 @@ import {
     FaLock,
     FaMedapps,
     FaUserAstronaut,
-    FaDoorOpen
+    FaDoorOpen,
+    FaLandmark,
+    FaMale
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
 import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi,isLogin, isLogout, setLogout, setLogin } = useContext(StateContext);
+    const { isAbout, setAbout, isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi,isLogin, isLogout, setLogout, setLogin } = useContext(StateContext);
 
     const toggle = () => setIsOpen(!isOpen);
     const navigate = useNavigate()
@@ -35,6 +37,7 @@ const Sidebar = ({ children }) => {
             setBMI(false);
             setWatch(false);
             setMedi(false);
+            setAbout(false);
         }
     }
 
@@ -47,6 +50,7 @@ const Sidebar = ({ children }) => {
             setBMI(false);
             setWatch(false);
             setMedi(false);
+            setAbout(false);
         }
     }
 
@@ -59,6 +63,7 @@ const Sidebar = ({ children }) => {
             setTodo(false);
             setWatch(false);
             setMedi(false);
+            setAbout(false);
         }
     }
 
@@ -71,6 +76,7 @@ const Sidebar = ({ children }) => {
             setTodo(false);
             setBMI(false);
             setMedi(false);
+            setAbout(false);
         }
     }
 
@@ -79,6 +85,20 @@ const Sidebar = ({ children }) => {
             alert("You are here Only");
         } else {
             setMedi(true);
+            setPost(false);
+            setTodo(false);
+            setBMI(false);
+            setWatch(false);
+            setAbout(false);
+        }
+    }
+
+    function ClickAbout(){
+        if(isAbout){
+            alert("You are here only")
+        } else{
+            setAbout(true);
+            setMedi(false);
             setPost(false);
             setTodo(false);
             setBMI(false);
@@ -95,6 +115,11 @@ const Sidebar = ({ children }) => {
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
+
+                <button onClick={ClickAbout} className="link">
+                    <div className="icon"><FaMale/></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">About Us</div>
+                </button>
                 
                 <button onClick={clickPost} className="link">
                     <div className="icon"><FaUserAstronaut /></div>
@@ -120,7 +145,9 @@ const Sidebar = ({ children }) => {
                     <div className="icon"><FaMedapps /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medi Reminder</div>
                 </button>
-                <button onClick={logOut} className="link" style={{marginTop: "17vh"}}>
+
+                
+                <button onClick={logOut} className="link" style={{marginTop: "8vh"}}>
                     <div className="icon"><FaDoorOpen/></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Log Out</div>
                 </button>
@@ -131,80 +158,3 @@ const Sidebar = ({ children }) => {
 };
 
 export default Sidebar;
-// import {useNavigate, Link} from 'react-router-dom'
-// import React, { useContext } from 'react';
-// import { StateContext } from '../Context API/StateContext';
-
-
-// export default function Sidebar(){
-//     const { isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi } = useContext(StateContext);
-
-//     function clickPost(){
-//         if(isPost){
-//             alert("You are here Only")
-//         } else{
-//             setPost(true)
-//             setTodo(false)
-//             setBMI(false)
-//             setWatch(false)
-//             setMedi(false)
-//         }
-        
-//     }
-
-//     function clickTodo(){
-//         if(isTodo){
-//             alert("You are here Only")
-//         } else{
-//             setTodo(true)
-//             setPost(false)
-//             setBMI(false)
-//             setWatch(false)
-//             setMedi(false)
-//         }
-//     }
-//     function clickBMI(){
-//         if(isBMI){
-//             alert("You are here Only")
-//         } else{
-//             setBMI(true)
-//             setPost(false)
-//             setTodo(false)
-//             setWatch(false)
-//             setMedi(false)
-//         }
-//     }
-//     function clickWatch(){
-//         if(isWatch){
-//             alert("You are here Only")
-//         } else{
-//             setWatch(true)
-//             setPost(false)
-//             setTodo(false)
-//             setBMI(false)
-//             setMedi(false)
-//         }
-//     }
-//     function clickMedi(){
-//         if(isMedi){
-//             alert("You are here Only")
-//         } else{
-//             setMedi(true)
-//             setPost(false)
-//             setTodo(false)
-//             setBMI(false)
-//             setWatch(false) 
-//         }
-//     }
-
-
-//     return<>
-//         <div className='sidebar'>
-//             <button onClick={clickPost}>My Posts</button>
-//             <button onClick={clickTodo}>Todo App</button>
-//             <button onClick={clickBMI}>BMI Calculator</button>
-//             <button onClick={clickWatch}>Stopwatch</button>
-//             <button onClick={clickMedi}>Medication Reminder</button>
-//         </div>
-//     </>
-// }

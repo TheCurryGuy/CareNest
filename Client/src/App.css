@@ -351,6 +351,7 @@ body {
 .link_text {
     display: inline; /* Always display text */
     white-space: nowrap; /* Prevent text wrapping */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 /* Hover effect for links */
