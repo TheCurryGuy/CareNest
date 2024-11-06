@@ -3,7 +3,7 @@ import "./about.css"
 export default function About(){
     return <div className="greet">
       <div className="summary">
-        <h2>Project Summary: CareNest - Your Comprehensive Healthcare Companion</h2>
+        <h2>About Us: CareNest - Your Comprehensive Healthcare Companion</h2>
         <p>
           <strong>Description:</strong> CareNest is a digital healthcare platform with a single-page interface that
           simplifies health management. It includes essential tools like a BMI calculator, TaskBoard, medication
