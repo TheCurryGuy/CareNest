@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react';
 import {
     FaBars,
-    FaAt,
     FaListUl,
     FaCalculator,
     FaLock,
     FaMedapps,
     FaUserAstronaut,
     FaDoorOpen,
-    FaLandmark,
-    FaMale
+    FaInfo
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
 import { useNavigate } from 'react-router-dom'
@@ -117,7 +115,7 @@ const Sidebar = ({ children }) => {
                 </div>
 
                 <button onClick={ClickAbout} className="link">
-                    <div className="icon"><FaMale/></div>
+                    <div className="icon"><FaInfo/></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">About Us</div>
                 </button>
                 
@@ -147,7 +145,7 @@ const Sidebar = ({ children }) => {
                 </button>
 
                 
-                <button onClick={logOut} className="link" style={{marginTop: "8vh"}}>
+                <button onClick={logOut} className="link" style={{marginTop: "28vh"}}>
                     <div className="icon"><FaDoorOpen/></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Log Out</div>
                 </button>
