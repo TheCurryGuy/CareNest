@@ -1,6 +1,3 @@
-Here's a README for your **CareNest** repository on GitHub:
-
----
 
 # CareNest V1.0
 
