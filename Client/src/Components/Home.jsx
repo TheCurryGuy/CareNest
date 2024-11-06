@@ -1,4 +1,4 @@
-import {useEffect, useContext} from 'react'
+import React, {useEffect, useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { StateContext } from '../Context API/StateContext';
 import Sidebar from './Sidebar';
@@ -25,14 +25,37 @@ export default function Home() {
     return (
       <div className='main-content'>
             <Sidebar/>
-            {isAbout && <About/>}
-            {isPost && <Post/>}
-            {isTodo && <Todo className = "todo-component"/>}
-            {isBMI && <BMICal/>}
-            {isWatch && <PassVault/>}
-            {isMedi && <MediReminder/>}
-            {isLogin && <Chatbot/>}
+            <ErrorBoundary>
+              {isAbout && <About/>}
+              {isPost && <Post/>}
+              {isTodo && <Todo className = "todo-component"/>}
+              {isBMI && <BMICal/>}
+              {isWatch && <PassVault/>}
+              {isMedi && <MediReminder/>}
+              {isLogin && <Chatbot/>}
+            </ErrorBoundary>
       </div>
     );
   }
   
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+      return { hasError: true };
+  }
+  componentDidCatch(error, info) {
+      console.error("Error caught:", error, info);
+  }
+  render() {
+      if (this.state.hasError) {
+          return <>
+              <h1>Something went wrong.</h1>
+              <p>Please Refresh!</p>
+          </>
+      }
+      return this.props.children; 
+  }
+}
