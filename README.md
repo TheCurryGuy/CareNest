@@ -1,5 +1,5 @@
 
-# CareNest V1.0
+# CareNest Version 1.0
 
 **CareNest** is a health-focused platform designed to offer users various health management tools in a React single-page application (SPA). This project includes multiple features that empower users to manage their well-being with tools like a personal AI Assistant, BMI calculator, medication reminders, and more. The app uses Context API for efficient state management, making it easy to access specific features selectively across the application.
 
