@@ -44,13 +44,12 @@ npm install
 1. **Run the Backend Server**
    
    After installing the dependencies, start the backend server:
-   Note - Please make sure to create your own dotenv file with the help of the provided example else the server won't run by any means!
-
+   
    ```bash
    cd server
    npm start
    ```
-
+   **Note - Please make sure to create your own dotenv file with the help of the provided example else the server won't run by any means!**
    The server will be available on `http://localhost:3000`.
    
 2. **Run the Client - Frontend Server**  
