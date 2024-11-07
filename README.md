@@ -41,7 +41,8 @@ npm install
 
 ## Usage
 
-1. **Run the Backend Server**  
+1. **Run the Backend Server**
+   Firstly make sure to create your own dotenv file with the help of the provided example else the server won't run by any means!
    After installing the dependencies, start the backend server:
 
    ```bash
