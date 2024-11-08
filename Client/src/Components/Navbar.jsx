@@ -17,7 +17,7 @@ export default function Navbar(){
   
   return <div className='Navbar'>
     <div className='name-navbar'>
-      CareNest Pvt. Ltd.
+      CareNest - The Healthcare Community
     </div>
     <ul>
       <div className='btn-nav'>
