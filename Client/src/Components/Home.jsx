@@ -9,6 +9,7 @@ import PassVault from './Main Content Components/PassVault';
 import MediReminder from './Main Content Components/MediReminder';
 import Chatbot from './Chatbot';
 import About from './Main Content Components/About';
+import Recipe from './Main Content Components/Recipe';
 
 export default function Home() {
     const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin, isAbout, isRecipe } = useContext(StateContext);
