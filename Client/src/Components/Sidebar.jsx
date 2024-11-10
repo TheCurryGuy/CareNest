@@ -170,7 +170,7 @@ const Sidebar = ({ children }) => {
                 </button>
 
                 
-                <button onClick={logOut} className="link" style={{marginTop: "28vh"}}>
+                <button onClick={logOut} className="link" >
                     <div className="icon"><FaDoorOpen/></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Log Out</div>
                 </button>
