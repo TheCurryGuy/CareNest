@@ -11,7 +11,7 @@ import Chatbot from './Chatbot';
 import About from './Main Content Components/About';
 
 export default function Home() {
-    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin, isAbout} = useContext(StateContext);
+    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin, isAbout, isRecipe } = useContext(StateContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
   
@@ -33,6 +33,7 @@ export default function Home() {
               {isWatch && <PassVault/>}
               {isMedi && <MediReminder/>}
               {isLogin && <Chatbot/>}
+              {isRecipe && <Recipe/>}
             </ErrorBoundary>
       </div>
     );

@@ -12,10 +12,11 @@ export function StateProvider({ children }) {
     const [isMedi, setMedi] = useState(false);
     const [isLogin, setLogin] = useState(false);
     const [isLogout, setLogout] = useState(true);
+    const [isRecipe, setRecipeState] = useState(false);
     
 
     return (
-        <StateContext.Provider value={{ isAbout, setAbout, isLogout, isPost, setPost, isTodo, setTodo, isBMI, isLogin, setLogout, setBMI, isWatch, setWatch, isMedi, setMedi, setLogin }}>
+        <StateContext.Provider value={{ isRecipe, setRecipeState, isAbout, setAbout, isLogout, isPost, setPost, isTodo, setTodo, isBMI, isLogin, setLogout, setBMI, isWatch, setWatch, isMedi, setMedi, setLogin }}>
             {children}
         </StateContext.Provider>
     );

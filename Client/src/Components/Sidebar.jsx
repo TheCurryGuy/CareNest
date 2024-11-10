@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import {
+    FaSearch,
     FaBars,
     FaListUl,
     FaCalculator,
@@ -14,7 +15,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { isAbout, setAbout, isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi,isLogin, isLogout, setLogout, setLogin } = useContext(StateContext);
+    const { isAbout, setAbout, isPost, setPost, isTodo, setTodo, isBMI, setBMI, isWatch, setWatch, isMedi, setMedi,isLogin, isLogout, setLogout, setLogin, isRecipe, setRecipeState } = useContext(StateContext);
 
     const toggle = () => setIsOpen(!isOpen);
     const navigate = useNavigate()
@@ -36,6 +37,7 @@ const Sidebar = ({ children }) => {
             setWatch(false);
             setMedi(false);
             setAbout(false);
+            setRecipeState(false);
         }
     }
 
@@ -49,6 +51,7 @@ const Sidebar = ({ children }) => {
             setWatch(false);
             setMedi(false);
             setAbout(false);
+            setRecipeState(false);
         }
     }
 
@@ -62,6 +65,7 @@ const Sidebar = ({ children }) => {
             setWatch(false);
             setMedi(false);
             setAbout(false);
+            setRecipeState(false);
         }
     }
 
@@ -75,6 +79,7 @@ const Sidebar = ({ children }) => {
             setBMI(false);
             setMedi(false);
             setAbout(false);
+            setRecipeState(false);
         }
     }
 
@@ -88,6 +93,7 @@ const Sidebar = ({ children }) => {
             setBMI(false);
             setWatch(false);
             setAbout(false);
+            setRecipeState(false);
         }
     }
 
@@ -96,6 +102,20 @@ const Sidebar = ({ children }) => {
             alert("You are here only")
         } else{
             setAbout(true);
+            setMedi(false);
+            setPost(false);
+            setTodo(false);
+            setBMI(false);
+            setWatch(false);
+            setRecipeState(false);
+        }
+    }
+    function ClickRecipe(){
+        if(isRecipe){
+            alert("You are here only")
+        } else{
+            setRecipeState(true);
+            setAbout(false);
             setMedi(false);
             setPost(false);
             setTodo(false);
@@ -129,9 +149,9 @@ const Sidebar = ({ children }) => {
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">TaskBoard</div>
                 </button>
 
-                <button onClick={clickBMI} className="link">
-                    <div className="icon"><FaCalculator /></div>
-                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">BMI Calculator</div>
+                <button onClick={ClickRecipe} className="link">
+                    <div className="icon"><FaSearch/></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Recipe Finder</div>
                 </button>
 
                 <button onClick={clickWatch} className="link">
@@ -142,6 +162,11 @@ const Sidebar = ({ children }) => {
                 <button onClick={clickMedi} className="link">
                     <div className="icon"><FaMedapps /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medi Reminder</div>
+                </button>
+
+                <button onClick={clickBMI} className="link">
+                    <div className="icon"><FaCalculator /></div>
+                    <div style={{ display: isOpen ? "block" : "none" }} className="link_text">BMI Calculator</div>
                 </button>
 
                 
