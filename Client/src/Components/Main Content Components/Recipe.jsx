@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './recipe.css';
 
-
-
 const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
   const [currentRecipeIndex, setCurrentRecipeIndex] = useState(0);
@@ -14,7 +12,6 @@ const Recipe = () => {
   const fetchRecipes = async () => {
     setLoading(true);
     setError(null);
-    console.log(import.meta.env.VITE_RECIPE_API)
 
     const options = {
       method: 'GET',
@@ -51,22 +48,29 @@ const Recipe = () => {
     }
   };
 
+  const handlePrevRecipe = () => {
+    if (currentRecipeIndex > 0) {
+      setCurrentRecipeIndex(currentRecipeIndex - 1);
+    } else {
+      alert('This is the first recipe');
+    }
+  };
+
   const currentRecipe = recipes[currentRecipeIndex];
 
   return (
     <div className="recipe-app">
-      
       <div className="search-section">
         <h1 className="greeting">Recipe Search</h1>
         <div>
-            <input
+          <input
             type="text"
             placeholder="Enter recipe name"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="search-input"
-            />
-            <button onClick={handleSearch} className="search-button">Search</button>
+          />
+          <button onClick={handleSearch} className="search-button">Search</button>
         </div>
       </div>
 
@@ -75,23 +79,26 @@ const Recipe = () => {
 
       {currentRecipe ? (
         <div className="recipe-card">
-            <div className='recipe-info'>
-                <div>
-                    <h3>{currentRecipe.title}</h3>
-                    <p><strong>Servings:</strong> {currentRecipe.servings}</p>
-                    <p><strong>Ingredients:</strong></p>
-                    <ul className="ingredients-list">
-                        {currentRecipe.ingredients.split('|').map((ingredient, i) => (
-                        <li key={i}>{ingredient.trim()}</li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <p><strong>Instructions:</strong></p>
-                    <p>{currentRecipe.instructions}</p>
-                </div>
+          <div className="recipe-info">
+            <div>
+              <h3>{currentRecipe.title}</h3>
+              <p><strong>Servings:</strong> {currentRecipe.servings}</p>
+              <p><strong>Ingredients:</strong></p>
+              <ul className="ingredients-list">
+                {currentRecipe.ingredients.split('|').map((ingredient, i) => (
+                  <li key={i}>{ingredient.trim()}</li>
+                ))}
+              </ul>
             </div>
+            <div>
+              <p><strong>Instructions:</strong></p>
+              <p>{currentRecipe.instructions}</p>
+            </div>
+          </div>
+          <div className="button-group">
+            <button onClick={handlePrevRecipe} className="prev-button">Prev</button>
             <button onClick={handleNextRecipe} className="next-button">Next</button>
+          </div>
         </div>
       ) : (
         !loading && <p className="error-message">No recipes found.</p>
