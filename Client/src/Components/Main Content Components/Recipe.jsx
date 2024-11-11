@@ -61,7 +61,7 @@ const Recipe = () => {
   return (
     <div className="recipe-app">
       <div className="search-section">
-        <h1 className="greeting">Recipe Search</h1>
+        <h1 className="greeting">Healthy Recipe Generator</h1>
         <div>
           <input
             type="text"
