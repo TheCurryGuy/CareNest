@@ -1,14 +1,14 @@
 .passvault {
-    min-height: 600px; /* Adjusted minimum height for the component */
+    min-height: 600px;
     width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px; /* Increased padding */
-    background-color: rgba(201,223,176,1); /* Background color changed */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Soft shadow */
-    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: rgba(201,223,176,1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
 .passvault h2 {
@@ -16,95 +16,95 @@
     font-family: 'Righteous', cursive;
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 20px;
 }
 h3{
     margin: auto;
 }
 .input-container {
     display: flex;
-    flex-direction: column; /* Stack input fields */
-    align-items: center; /* Center align inputs */
-    margin-bottom: 20px; /* Space below inputs */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 input {
     border-radius: 5px;
-    border: 1px solid #181818; /* Softer border */
-    width: 250px; /* Fixed width for inputs */
-    margin-bottom: 10px; /* Space between inputs */
-    padding: 10px; /* Padding for inputs */
-    transition: border-color 0.3s; /* Transition for border */
+    border: 1px solid #181818;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: border-color 0.3s;
     margin-right: 8px;
     background-color: #d7e8c4;
 }
 
 input:focus {
-    border-color: rgb(32, 85, 182); /* Highlight border color on focus */
+    border-color: rgb(32, 85, 182);
 }
 
 button {
-    margin-top: 10px; /* Space above button */
-    padding: 9px 34px; /* Padding for button */
-    border-radius: 5px; /* Rounded button */
-    background-color: #4ca850; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    font-size: 1.1em; /* Slightly larger font size */
-    font-weight: bold; /* Bold text */
+    margin-top: 10px;
+    padding: 9px 34px;
+    border-radius: 5px;
+    background-color: #4ca850;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #439547; /* Darker on hover */
-    transform: translateY(-1px); /* Lift effect on hover */
+    background-color: #439547;
+    transform: translateY(-1px);
 }
 
 .credentials-list {
-    width: 100%; /* Full width of parent */
-    margin-top: 20px; /* Space above the list */
+    width: 100%;
+    margin-top: 20px;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to new lines */
-    justify-content: center; /* Center align cards */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .credential-card {
-    border: 1px solid #555; /* Light border for card effect */
-    width: 100%; /* Full width of parent */
-    max-width: 350px; /* Max width for the card */
-    margin: 10px; /* Space around cards */
+    border: 1px solid #555;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
     border-radius: 10px;
-    padding: 15px; /* Padding for content */
-    background-color: #cec9a7; /* Light background for credentials */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    padding: 15px;
+    background-color: #cec9a7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .credential-card:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .credential-card p {
     font-family: 'Lobster', cursive;
-    font-size: 1em; /* Regular font size */
-    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1em;
+    margin: 5px 0;
 }
 
 .credential-card button {
-    background: #ff6b6b; /* Red for delete button */
+    background: #ff6b6b;
     color: white;
-    padding: 10px 15px; /* Padding for button */
-    border-radius: 5px; /* Rounded button */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    font-size: 0.9em; /* Font size for button */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.9em;
     margin-right: 10px;
 }
 
 .credential-card button:hover {
-    background: #ff4f4f; /* Darker red on hover */
-    transform: scale(1.05); /* Slight scale on hover */
+    background: #ff4f4f;
+    transform: scale(1.05);
 }

@@ -1,4 +1,4 @@
-/* MAIN CSS APP.CSS */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,37 +6,26 @@ body {
 }
 
 #mainPage {
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Arrange children in a column */
-    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 #content {
-    flex: 1; /* Allow this to take the remaining space */
+    flex: 1;
     padding: 0;
     margin: 0;
-    overflow: auto; /* Handle overflow if content is larger than the container */
+    overflow: auto;
     background: rgb(223,227,186);
     background: linear-gradient(180deg, rgba(223,227,186,1) 0%, rgba(201,223,176,1) 50%, rgba(223,227,186,1) 100%);
 }
-/* Landing.css */
+
 .landing-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Make it full viewport height */
+    height: 100vh;
     overflow: hidden;
 }
-
-  
-/* .welcome-text {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
-    /* color: white;
-    font-size: 2rem; /* Adjust the font size as needed */
-    /* z-index: 1; Ensure the text appears over the Spline scene */
-/* }  */
   
 .landing-container canvas {
     width: 100%;
@@ -48,15 +37,14 @@ body {
     
 }
 
-/* NAVBAR */
+
 .Navbar {
-    /* background: rgb(200,188,176);
-    background: linear-gradient(180deg, rgba(200,188,176,1) 0%, rgba(254,227,203,1) 64%); */
+   
     padding:  8px;
     background: rgb(149,161,148);
     background: linear-gradient(180deg, rgba(149,161,148,1) 0%, rgba(223,227,186,1) 47%);
-    height: 6vh; /* Fixed height */
-    border-bottom: 2px solid #555; /* Adds a bottom border */
+    height: 6vh;
+    border-bottom: 2px solid #555;
     display: flex;
     justify-content: space-between;
 }
@@ -103,8 +91,8 @@ body {
 }
 
 .Navbar a {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the link takes the text color of its parent */
+    text-decoration: none;
+    color: inherit;
     font-size: large;
     margin-right: 5px;
     padding: 5px;
@@ -115,36 +103,35 @@ body {
 }
 
 .Navbar a:hover {
-     /* Optional: Adds underline on hover */
+    
     cursor: pointer;
     padding: 5px;
 }
 
-/* footer */
+
 .footer {
-    /* background: rgb(254,227,203);
-    background: linear-gradient(180deg, rgba(254,227,203,1) 0%, rgba(200,188,176,1) 49%); */
+   
     background: rgb(223,227,186);
     background: linear-gradient(180deg, rgba(223,227,186,1) 15%, rgba(149,161,148,1) 100%);
-    height: 6vh; /* Fixed height */
+    height: 6vh;
     padding: 8px;
     margin: 0;
-    display: flex; /* Use flexbox to center content */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-top: 2px solid #555;
 }
 
 .footer p {
-    margin: 0; /* Remove default margin to ensure proper centering */
-    text-align: center; /* Center text inside the p tag */
+    margin: 0;
+    text-align: center;
     font-family: "Borel", cursive;
     font-weight: 400;
     font-style: normal;
 }
 
 
-/* Card Styling LOGIN SECTION */
+
 #loginCard {
     display: flex;
     flex-direction: column;
@@ -215,8 +202,8 @@ body {
 }
 
 
-/* SIGN UP CARD */
-/* Card Styling */
+
+
 #signupCard {
     display: flex;
     flex-direction: column;
@@ -274,120 +261,120 @@ body {
 }
 
 
-/* MAIN CONTENT SECTION INCLUDES - SIDEBAR AND THE SCREEN  */
 
-/* Main content area in Home component */
+
+
 .main-content {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh; /* Ensure the content fills the screen height */
+    height: 100vh;
     background: rgb(223,227,186);
     background: linear-gradient(180deg, rgba(223,227,186,1) 0%, rgba(201,223,176,1) 50%, rgba(223,227,186,1) 100%);
 }
-/* Sidebar styling */
+
 .sidebar {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    height: 100%; /* Adjust height to fit the layout */
-    width: 50px; /* Collapsed width */
-    background-color: #cec9ac; /* Sidebar background color */
-    padding: 10px 0; /* Padding for the sidebar */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    transition: width 0.3s ease; /* Smooth transition for width */
+    align-items: flex-start;
+    height: 100%;
+    width: 50px;
+    background-color: #cec9ac;
+    padding: 10px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: width 0.3s ease;
     margin-right: 15px;
 }
 
-/* Top section with logo and toggle icon */
+
 .top_section {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: space-between; /* Space between logo and toggle */
+    align-items: center;
+    justify-content: space-between;
     width: 90%;
-    padding: 10px; /* Padding around the top section */
+    padding: 10px;
 }
 
 .logo {
-    font-size: 1.5rem; /* Larger font for logo */
-    font-weight: bold; /* Bold text */
-    color: #2c3e50; /* Dark color for logo */
-    display: none; /* Hidden when collapsed */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    display: none;
     margin-right: 0px;
 }
 
 .bars {
-    cursor: pointer; /* Pointer cursor for toggle icon */
-    font-size: 1.5rem; /* Increase icon size */
-    color: #2c3e50; /* Icon color */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #2c3e50;
 }
 .icon{
     margin-left:20px ;
 }
 
-/* Sidebar links */
+
 .link {
-    width: 100%; /* Full width for links */
-    display: flex; /* Flex for alignment */
-    align-items: center; /* Center items */
-    padding: 15px 10px; /* Padding for links */
-    text-decoration: none; /* Remove underline */
-    color: #353d2f; /* Text color */
-    font-size: 16px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #353d2f;
+    font-size: 16px;
+    border-radius: 5px;
     border: none;
     background-color: #cec9ac;
     transition: background-color 0.3s ease, color 0.3s ease; 
-    margin: 5px 0; /* Space between links */
-    cursor: pointer; /* Cursor pointer for links */
+    margin: 5px 0;
+    cursor: pointer;
 }
 
-/* Ensure text and icon align properly */
+
 .link .icon {
-    font-size: 1.5rem; /* Icon size */
-    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.5rem;
+    margin-right: 10px;
 }
 
-/* Ensure the link text does not wrap */
+
 .link_text {
-    display: inline; /* Always display text */
-    white-space: nowrap; /* Prevent text wrapping */
+    display: inline;
+    white-space: nowrap;
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* Hover effect for links */
+
 .link:hover {
-    background-color: #9e726966; /* Light blue on hover */
-    /* color: wheat; Darker text on hover */
+    background-color: #9e726966;
+   
 }
 
-/* SCROLLBAR CHANGE */
+
 #content::-webkit-scrollbar {
-    width: 18px; /* Set the width of the scrollbar */
+    width: 18px;
 }
 
 #content::-webkit-scrollbar-track {
-    background-color: #DFE3BA; /* Light background for the track */
+    background-color: #DFE3BA;
     border: 1px solid #4d4d4d;
     
 }
 
 #content::-webkit-scrollbar-thumb {
-    background-color: #D7E8C4; /* Greenish color for the thumb */
-    border-radius: 2px; /* Rounded corners for the thumb */
-    border: 1px solid #4d4d4d; /* Adds spacing between thumb and track */
+    background-color: #D7E8C4;
+    border-radius: 2px;
+    border: 1px solid #4d4d4d;
 }
 
 #content::-webkit-scrollbar-thumb:hover {
-    background-color: #c6d9b3; /* Darker green on hover */
+    background-color: #c6d9b3;
 }
 
-/* Optional responsive design */
+
 @media (max-width: 768px) {
     .sidebar {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Adjust height */
+        width: 100%;
+        height: auto;
     }
 }
 

@@ -1,17 +1,17 @@
-/* MedicationReminder.css */
+
 
 .header {
     min-height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #ccc; /* Softer border color */
+    border-right: 1px solid #ccc; 
     align-items: center;
-    padding: 20px; /* Increased padding */
+    padding: 20px; 
     margin-top: 25px;
-    background-color: #ffffff; /* White background for header */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
 }
 
 .header h3 {
@@ -19,126 +19,126 @@
     font-family: 'Righteous', cursive;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px; /* Added margin for spacing */
+    margin-bottom: 15px; 
 }
 /* #d7e8c4 */
 .medication {
-    border: 1px solid #555; /* Light border for card effect */
-    width: 100%; /* Full width of parent */
-    max-width: 300px; /* Max width for the card */
-    margin: 10px auto; /* Center cards with auto margin */
+    border: 1px solid #555; 
+    width: 100%; 
+    max-width: 300px; 
+    margin: 10px auto; 
     border-radius: 10px;
-    padding: 15px; /* Increased padding for content */
-    background-color: #cec9a7; /* Light background for medication items */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    padding: 15px; 
+    background-color: #cec9a7; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s; 
 }
 
 .medication:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
 }
 
 .medication p {
     font-family: 'Lobster', cursive;
-    font-size: 1.1em; /* Slightly larger font */
-    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1.1em; 
+    margin: 5px 0; 
 }
 
 .medication .priority {
-    font-size: 0.9em; /* Adjust priority font size */
-    color: #ff9800; /* Default color for priority */
-    font-weight: bold; /* Make priority text bold */
+    font-size: 0.9em; 
+    color: #ff9800; 
+    font-weight: bold; 
 }
 
 .medication i {
-    background: #ff6b6b; /* Red for delete icon */
+    background: #ff6b6b; 
     color: white;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    border: none; /* Remove border */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    border: none; 
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .medication i:hover {
-    background: #ff4f4f; /* Darker red on hover */
-    transform: scale(1.1); /* Slight scale on hover */
+    background: #ff4f4f; 
+    transform: scale(1.1); 
 }
 
 .input-container {
     display: flex;
-    flex-direction: column; /* Stack input fields */
-    align-items: center; /* Center align inputs */
-    margin-bottom: 20px; /* Add margin for spacing */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 20px; 
 }
 
 .add-medication-section input {
-    background-color: #d7e8c4; /* Consistent background */
+    background-color: #d7e8c4; 
 }
 
 select {
-    background-color: #d7e8c4; /* Consistent background */
+    background-color: #d7e8c4; 
 }
 
 .input, .priority {
     border-radius: 5px;
-    border: 1px solid #ccc; /* Softer border */
-    width: 250px; /* Fixed width for inputs */
-    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc; 
+    width: 250px; 
+    margin-bottom: 10px; 
     padding: 10px;
-    transition: border-color 0.3s; /* Transition for border */
+    transition: border-color 0.3s; 
 }
 
 .input:focus, .priority:focus {
-    border-color: rgb(32, 85, 182); /* Highlight border color on focus */
+    border-color: rgb(32, 85, 182); 
 }
 
 .row {
     display: flex;
-    justify-content: center; /* Center the columns */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center;
+    flex-wrap: wrap; 
 }
 
 .box {
     padding: 0;
     margin: 10px;
-    background-color: #d7e8c4; /* Light background for boxes */
-    border: 1px solid #ddd; /* Light border for boxes */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for boxes */
-    flex: 1 0 300px; /* Allow boxes to grow, taking up space */
+    background-color: #d7e8c4; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    flex: 1 0 300px; 
 }
 
 .submit {
     margin-right: 5px;
     width: 40vh;
-    margin-top: 10px; /* Space above button */
-    padding: 12px 24px; /* More padding for button */
-    border-radius: 5px; /* Rounded button */
-    background-color: #4ca850; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    font-size: 1.1em; /* Slightly larger font size */
-    font-weight: bold; /* Bold text */
+    margin-top: 10px; 
+    padding: 12px 24px; 
+    border-radius: 5px; 
+    background-color: #4ca850;  
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    font-size: 1.1em; 
+    font-weight: bold; 
 }
 
 .submit:hover {
-    background-color: #439547; /* Darker on hover */
-    transform: translateY(-1px); /* Lift effect on hover */
+    background-color: #439547; 
+    transform: translateY(-1px); 
 }
 
-/* Additional styles for adding Medication section layout */
+
 .add-medication-section {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 15px; /* Space between items */
-    margin-bottom: 20px; /* Space below section */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    margin-bottom: 20px; 
 }
 
 .medication-app {
     width: 100%;
-    margin-top: 50px; /* Space above application */
+    margin-top: 50px; 
 }

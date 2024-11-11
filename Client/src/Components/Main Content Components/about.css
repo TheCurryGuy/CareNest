@@ -1,9 +1,9 @@
-/* CareNest.css */
+
 
 .greet {
  /* Light green background for the page */
     font-family: Arial, sans-serif;
-    color: #555; /* Darker gray text color */
+    color: #555; 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -11,7 +11,7 @@
 }
   
 .summary {
-    background-color: #d7e8c4; /* Light tan background for the summary section */
+    background-color: #d7e8c4; 
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
@@ -22,18 +22,18 @@
 }
   
 .summary h2 {
-    color: #555; /* Darker gray color for section headings */
+    color: #555; 
     font-size: 1.8em;
     margin-bottom: 10px;
 }
   
 .summary p, .summary li {
-    color: #555; /* Darker gray text color for paragraph and list items */
+    color: #555; 
     line-height: 1.6;
 }
   
 .summary strong {
-    color: #4e4738; /* Light gray color for bold text */
+    color: #4e4738; 
 }
   
   ol {
@@ -42,14 +42,14 @@
 }
   
 .pros-cons h2 {
-    color: #555; /* Darker gray color for "Key Benefits" heading */
+    color: #555; 
     font-size: 1.6em;
     margin-top: 10px;
     margin-bottom: 10px;
 }
   
 .pros-cons ol {
-    background-color: #cec9a7; /* Light green background for pros and cons section */
+    background-color: #cec9a7; 
     border-radius: 8px;
     padding: 15px;
 }

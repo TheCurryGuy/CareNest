@@ -1,4 +1,4 @@
-/* Main app container */
+
 .recipe-app {
     font-family: Arial, sans-serif;
     color: #555;
@@ -13,7 +13,7 @@
     background-color: transparent;
 }
 
-/* Search section */
+
 .search-section {
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
     background-color: #8f9f82;
 }
 
-/* Recipe card styles */
+
 .recipe-card {
     background-color: transparent;
     border-radius: 8px;
@@ -61,13 +61,13 @@
     overflow-y: auto;
 }
 
-/* Flex for recipe info */
+
 .recipe-info {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Recipe title */
+
 .recipe-card h3 {
     color: #555;
     font-size: 1.5em;
@@ -83,13 +83,13 @@
     color: #4e4738;
 }
 
-/* Ingredient list */
+
 .ingredients-list {
     list-style-type: disc;
     padding-left: 1.5em;
 }
 
-/* Button container for prev and next buttons */
+
 .button-group {
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@
     margin-top: 20px;
 }
 
-/* Button styling */
+
 .prev-button, .next-button {
     padding: 10px 15px;
     background-color: hsl(52, 20%, 69%);
@@ -114,14 +114,14 @@
     background-color: #b2ae92;
 }
 
-/* Error and loading messages */
+
 .error-message, .loading-message {
     color: #a94442;
     margin: 20px;
     font-weight: bold;
 }
 
-/* Customizing the scrollbar */
+
 .recipe-card::-webkit-scrollbar {
     width: 14px;
 }
@@ -151,7 +151,7 @@
     justify-content: center;
 }
 
-/* Responsive layout adjustments */
+
 @media (max-width: 768px) {
     .search-input {
         width: 80%;
