@@ -5,10 +5,10 @@ import {
     FaListUl,
     FaCalculator,
     FaLock,
-    FaMedapps,
     FaUserAstronaut,
     FaDoorOpen,
-    FaInfo
+    FaInfo,
+    FaPills
 } from "react-icons/fa";
 import { StateContext } from '../Context API/StateContext';
 import { useNavigate } from 'react-router-dom'
@@ -160,7 +160,7 @@ const Sidebar = ({ children }) => {
                 </button>
 
                 <button onClick={clickMedi} className="link">
-                    <div className="icon"><FaMedapps /></div>
+                    <div className="icon"><FaPills /></div>
                     <div style={{ display: isOpen ? "block" : "none" }} className="link_text">Medi Reminder</div>
                 </button>
 
