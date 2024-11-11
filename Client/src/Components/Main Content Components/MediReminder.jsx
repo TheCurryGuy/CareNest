@@ -1,38 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import "./medi.css"
+import "./medi.css";
 
 const MediReminder = () => {
     // State for medications and input values
     const [medications, setMedications] = useState(() => {
         const savedMedications = localStorage.getItem('medications');
-        return savedMedications ? JSON.parse(savedMedications) : []; // Return parsed data or an empty array
+        return savedMedications ? JSON.parse(savedMedications) : [];
     });
     const [medicineName, setMedicineName] = useState('');
     const [usedFor, setUsedFor] = useState('');
     const [priority, setPriority] = useState('medium');
+    const [time, setTime] = useState(''); // New state for time
     let draggableMedication = null;
 
     // Update localStorage whenever medications change
     useEffect(() => {
-        localStorage.setItem('medications', JSON.stringify(medications)); // Store updated medications in localStorage
-    }, [medications]); // Run every time 'medications' changes
+        localStorage.setItem('medications', JSON.stringify(medications));
+    }, [medications]);
 
     const addItem = (e) => {
         e.preventDefault();
-        if (medicineName.trim() && usedFor.trim()) {
+        if (medicineName.trim() && usedFor.trim() && time.trim()) {
             const newMedication = {
                 id: Date.now(),
                 name: medicineName,
                 usedFor,
                 priority,
-                status: 'required' // Default status
+                time, // Add time to the medication object
+                status: 'required'
             };
-            setMedications((prevMedications) => [...prevMedications, newMedication]); // Update medications state
-            setMedicineName(''); // Clear medicine name input
-            setUsedFor(''); // Clear used for input
-            setPriority('medium'); // Reset priority to default
+            setMedications((prevMedications) => [...prevMedications, newMedication]);
+            setMedicineName('');
+            setUsedFor('');
+            setPriority('medium');
+            setTime(''); // Clear time input after adding
         }
     };
 
@@ -45,14 +48,14 @@ const MediReminder = () => {
             const updatedMedications = medications.map(medication =>
                 medication.id === draggableMedication.id ? { ...medication, status: newStatus } : medication
             );
-            setMedications(updatedMedications); // Update state with new status
-            draggableMedication = null; // Clear the draggable medication
+            setMedications(updatedMedications);
+            draggableMedication = null;
         }
     };
 
     const handleDelete = (id) => {
-        const updatedMedications = medications.filter(medication => medication.id !== id); // Filter out deleted medication
-        setMedications(updatedMedications); // Update state
+        const updatedMedications = medications.filter(medication => medication.id !== id);
+        setMedications(updatedMedications);
     };
 
     const filterMedicationsByStatus = (status) => {
@@ -81,6 +84,15 @@ const MediReminder = () => {
                         onChange={(e) => setUsedFor(e.target.value)}
                         placeholder="Used for"
                     />
+                    <label htmlFor="medication-time">Time to Take:</label>
+                    <input
+                        type="time" // Input for time
+                        id="medication-time"
+                        className="input"
+                        value={time}
+                        onChange={(e) => setTime(e.target.value)}
+                        placeholder="Time to take"
+                    />
                     <label htmlFor="medication-priority">Priority:</label>
                     <select
                         id="medication-priority"
@@ -92,6 +104,7 @@ const MediReminder = () => {
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
                     </select>
+                    
                 </div>
                 <button className="submit" onClick={addItem}>
                     Add
@@ -120,6 +133,7 @@ const MedicationColumn = ({ title, medications = [], onDragStart, onDrop, onDele
                     <p>Name: {medication.name}</p>
                     <p>Used For: {medication.usedFor}</p>
                     <p>Priority: {medication.priority}</p>
+                    <p>Time: {medication.time}</p> {/* Display time on the card */}
                     <FontAwesomeIcon icon={faTrash} className="trash" onClick={() => onDelete(medication.id)} />
                 </div>
             ))}
