@@ -5,7 +5,7 @@ import Spline from '@splinetool/react-spline';
 function Landing() {
   return (
     <div className="landing-container">
-      <Spline className='scene' scene="https://prod.spline.design/uNngMMaJPgyc6vIr/scene.splinecode" />
+      <Spline className='scene' scene="https://prod.spline.design/e1uQ9QMqbDEDFWoa/scene.splinecode" />
     </div>
   );
 }
