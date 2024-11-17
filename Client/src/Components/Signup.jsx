@@ -24,30 +24,28 @@ export default function Signup() {
         lastName: lastName.current.value,
       });
 
-      // Handle success alert
       setAlertMessage('You are signed up: ' + response.data.message);
       setAlertSeverity('success');
       setShowAlert(true);
 
-      // Handle timeout and navigate based on alert severity
       setTimeout(() => {
-        setShowAlert(false); // Hide alert after the specified time
+        setShowAlert(false); 
         if (alertSeverity === 'success') {
-          navigate("/"); // Navigate to home after success alert disappears
+          navigate("/");
         }
-      }, alertSeverity === 'error' ? 4000 : 2000); // Error alert stays for 4 seconds, others for 2 seconds
+      }, alertSeverity === 'error' ? 4000 : 2000); 
     } catch (error) {
       console.error('Signup Error:', error);
       
-      // Handle error alert
+
       setAlertMessage('Error signing up: ' + error.message);
       setAlertSeverity('error');
       setShowAlert(true);
       
-      // Handle timeout for error
+
       setTimeout(() => {
-        setShowAlert(false); // Hide alert after the specified time
-      }, 4000); // Error alert stays for 4 seconds
+        setShowAlert(false); 
+      }, 4000); 
     }
   }
 
@@ -63,7 +61,6 @@ export default function Signup() {
         <li>Already have an account? <Link to="/login">Login here</Link></li>
       </div>
 
-      {/* Displaying the MUI Alert */}
       {showAlert && (
         <Alert
           icon={alertSeverity === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
@@ -72,7 +69,7 @@ export default function Signup() {
             position: 'fixed',
             top: '70px',
             left: '50%',
-            transform: 'translateX(-50%)', // Center the alert horizontally
+            transform: 'translateX(-50%)', 
             zIndex: 1200,
             width: 'auto'
           }}
