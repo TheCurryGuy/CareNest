@@ -7,7 +7,7 @@ export default function About(){
         <p>
           <strong>Description:</strong> CareNest is a digital healthcare platform with a single-page interface that
           simplifies health management. It includes essential tools like a BMI calculator, TaskBoard, medication
-          reminders, a secure password vault, and an AI Health Assistant knowledgeable in over 9,000 medicines. With a
+          reminders, a secure password vault, Recipe Generator and an AI Health Assistant knowledgeable in over 9,000 medicines. With a
           focus on ease of use and security, CareNest provides a convenient way for users to manage their health.
         </p>
 
@@ -19,8 +19,8 @@ export default function About(){
             tricky health choice, Dr. Chloe is here to support your wellness journey with a smile.
           </li>
           <li>
-            <strong>BMI Calculator:</strong> Enables users to monitor and calculate their Body Mass Index, supporting
-            physical health awareness and fitness tracking.
+            <strong>Healthy Recipe Generator:</strong>  A feature that generates up to 10 recipes at a time based on the 
+            specified primary ingredient or dish name, empowering users to explore new, healthy meal options.
           </li>
           <li>
             <strong>Daily Medication Reminder:</strong> Assists users in staying consistent with their medication
@@ -33,6 +33,10 @@ export default function About(){
           <li>
             <strong>Task Board:</strong> Allows users to store and organize tasks with descriptions and deadlines,
             helping them stay on top of important activities.
+          </li>
+          <li>
+            <strong>BMI Calculator:</strong> Enables users to monitor and calculate their Body Mass Index, supporting
+            physical health awareness and fitness tracking.
           </li>
           <li>
             <strong>User-Friendly Design:</strong> With an intuitive, single-page interface, CareNest is accessible for
