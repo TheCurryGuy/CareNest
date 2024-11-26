@@ -35,10 +35,6 @@ export default function About(){
             helping them stay on top of important activities.
           </li>
           <li>
-            <strong>BMI Calculator:</strong> Enables users to monitor and calculate their Body Mass Index, supporting
-            physical health awareness and fitness tracking.
-          </li>
-          <li>
             <strong>User-Friendly Design:</strong> With an intuitive, single-page interface, CareNest is accessible for
             elderly users and busy individuals alike, offering a smooth and modern experience.
           </li>
