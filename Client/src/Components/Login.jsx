@@ -34,6 +34,7 @@ export default function Login() {
         alert('Your session has expired cant redirect. Please log in again.');
         localStorage.removeItem('token'); // Removing expired token
       } else {
+        alert("Acces token Vaild you may Proceed")
         setLogin(true);
         setLogout(false);
         navigate('/home');
@@ -48,23 +49,27 @@ export default function Login() {
     try {
       const token = localStorage.getItem('token');
       let response = {};
-      if (token) {
-        // Checking if the token is expired
-        if (isTokenExpired(token)) {
-          alert('Your session has expired cant redirect. Please log in again.');
-          localStorage.removeItem('token'); // Removing expired token
-        } else {
-          alert('You are already Signed In');
-          setLogin(true);
-          setLogout(false);
-          navigate('/home');
-          return;
-        }
+      if(!username.current.value || !password.current.value){
+        alert("Enter Credentials first")
       } else{
-          response = await axios.post('https://thecurryguy.vercel.app/user/signin', {
-          username: username.current.value,
-          password: password.current.value,
-        });
+        if (token) {
+          // Checking if the token is expired
+          if (isTokenExpired(token)) {
+            alert('Your session has expired cant redirect. Please log in again.');
+            localStorage.removeItem('token'); // Removing expired token
+          } else {
+            alert('You are already Signed In');
+            setLogin(true);
+            setLogout(false);
+            navigate('/home');
+            return;
+          }
+        } else{
+            response = await axios.post('https://thecurryguy.vercel.app/user/signin', {
+            username: username.current.value,
+            password: password.current.value,
+          });
+        }
       }
 
       if (response.data.token) {
