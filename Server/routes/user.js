@@ -58,7 +58,7 @@ userRouter.post("/signin", async (req,res)=> {
     if(matchpass){
         const token = jwt.sign({
             id : user._id.toString()
-        }, JWT_SECRET)
+        }, JWT_SECRET, { expiresIn: "24h" })
         res.json({
             message : "you are signed in",
             token : token

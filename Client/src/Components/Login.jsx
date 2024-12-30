@@ -5,6 +5,7 @@ import { StateContext } from '../Context API/StateContext';
 import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import ErrorIcon from '@mui/icons-material/Error';
+import jwt_decode from 'jwt-decode';
 
 export default function Login() {
   const username = useRef();
@@ -14,18 +15,36 @@ export default function Login() {
   const [alertMessage, setAlertMessage] = useState('');
   const [alertSeverity, setAlertSeverity] = useState('');
   const [showAlert, setShowAlert] = useState(false);
+  
+
+  function isTokenExpired(token) {
+    try {
+      const decoded = jwt_decode(token);
+      const currentTime = Date.now() / 1000; // Current time in seconds
+      return decoded.exp < currentTime; 
+    } catch (error) {
+      console.error('Error decoding token:', error);
+      return true;
+    }
+  }
 
   async function Signin() {
     try {
       const token = localStorage.getItem('token');
       let response = {};
       if (token) {
-        alert("You are already Signed In")
-        setLogin(true);
-        setLogout(false);
-        navigate("/home");
-      }
-      else{
+        // Checking if the token is expired
+        if (isTokenExpired(token)) {
+          alert('Your session has expired cant redirect. Please log in again.');
+          localStorage.removeItem('token'); // Removing expired token
+        } else {
+          alert('You are already Signed In');
+          setLogin(true);
+          setLogout(false);
+          navigate('/home');
+          return;
+        }
+      } else{
           response = await axios.post('https://thecurryguy.vercel.app/user/signin', {
           username: username.current.value,
           password: password.current.value,
