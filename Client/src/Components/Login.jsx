@@ -17,10 +17,18 @@ export default function Login() {
 
   async function Signin() {
     try {
-      const response = await axios.post('https://thecurryguy.vercel.app/user/signin', {
-        username: username.current.value,
-        password: password.current.value,
-      });
+      const token = localStorage.getItem('token');
+      let response = {};
+      if (token) {
+        alert("You are already Signed In")
+        navigate("/home");
+      }
+      else{
+          response = await axios.post('https://thecurryguy.vercel.app/user/signin', {
+          username: username.current.value,
+          password: password.current.value,
+        });
+      }
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
