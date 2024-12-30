@@ -107,7 +107,10 @@ export default function Login() {
         <button>
           <Link to="/Signup" className="button-link">Go to Signup</Link>
         </button>
-        <button onClick = {handleProceedClick} className='proceed-here'>Proceed here</button>
+        <button onClick = {handleProceedClick} className='proceed-here' style={{
+          backgroundColor: "#C2DEA3",
+          color: "#555"
+        }}>Proceed here</button>
       </div>
 
 

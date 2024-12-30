@@ -188,17 +188,9 @@ body {
     background-color: #439547;
     color: black;
 }
-
-.proceed-here{
-    margin-top: 1rem;
-    background-color: #C2DEA3;
-    color: #555;
+#loginCard a {
+    text-decoration: none;   
 }
-.proceed-here:hover{
-    background-color: #C2DEA3;
-    color: #555;
-}
-
 
 
 
