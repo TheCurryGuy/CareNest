@@ -5,7 +5,7 @@ import { StateContext } from '../Context API/StateContext';
 import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import ErrorIcon from '@mui/icons-material/Error';
-import jwt_decode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 
 export default function Login() {
   const username = useRef();
@@ -19,7 +19,7 @@ export default function Login() {
 
   function isTokenExpired(token) {
     try {
-      const decoded = jwt_decode(token);
+      const decoded = jwtDecode(token);
       const currentTime = Date.now() / 1000; // Current time in seconds
       return decoded.exp < currentTime; 
     } catch (error) {
