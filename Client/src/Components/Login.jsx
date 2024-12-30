@@ -51,7 +51,7 @@ export default function Login() {
       let response = {};
       if(!username.current.value || !password.current.value){
         alert("Enter Credentials first")
-      } else{
+      } else {
         if (token) {
           // Checking if the token is expired
           if (isTokenExpired(token)) {
@@ -70,27 +70,26 @@ export default function Login() {
             password: password.current.value,
           });
         }
-      }
-
-      if (response.data.token) {
-        localStorage.setItem('token', response.data.token);
-        setAlertMessage('You are signed in');
-        setAlertSeverity('success');
-        setShowAlert(true);
-        setLogin(true);
-        setLogout(false);
-        setTimeout(() => {
-          setShowAlert(false); 
-          navigate("/home");
-        }, 2000); 
-      } else {
-        setAlertMessage('Invalid Credentials');
-        setAlertSeverity('error');
-        setShowAlert(true);
-        setTimeout(() => {
-          setShowAlert(false); 
-        }, 2000); 
-      }
+        if (response.data.token) {
+          localStorage.setItem('token', response.data.token);
+          setAlertMessage('You are signed in');
+          setAlertSeverity('success');
+          setShowAlert(true);
+          setLogin(true);
+          setLogout(false);
+          setTimeout(() => {
+            setShowAlert(false); 
+            navigate("/home");
+          }, 2000); 
+        } else {
+          setAlertMessage('Invalid Credentials');
+          setAlertSeverity('error');
+          setShowAlert(true);
+          setTimeout(() => {
+            setShowAlert(false); 
+          }, 2000); 
+        }
+      } 
     } catch (error) {
       console.error('Signin Error:', error);
       setAlertMessage('Error signing in');
