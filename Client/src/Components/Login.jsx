@@ -62,7 +62,10 @@ export default function Login() {
         <button>
           <Link to="/Signup" className="button-link">Go to Signup</Link>
         </button>
-        <li><Link to="/home" className='proceed-here'><b>Proceed here</b></Link></li>
+        <li><Link to="/home" onClick = {()=> {
+          setLogin(true);
+          setLogout(false);
+          }}className='proceed-here'><b>Proceed here</b></Link></li>
       </div>
 
 
