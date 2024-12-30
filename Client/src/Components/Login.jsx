@@ -27,6 +27,22 @@ export default function Login() {
       return true;
     }
   }
+  const handleProceedClick = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      if (isTokenExpired(token)) {
+        alert('Your session has expired cant redirect. Please log in again.');
+        localStorage.removeItem('token'); // Removing expired token
+      } else {
+        setLogin(true);
+        setLogout(false);
+        navigate('/home');
+        return;
+      }
+    } else{
+      alert("Login First, access invalid");
+    }
+  };
 
   async function Signin() {
     try {
@@ -91,10 +107,7 @@ export default function Login() {
         <button>
           <Link to="/Signup" className="button-link">Go to Signup</Link>
         </button>
-        <li><Link to="/home" onClick = {()=> {
-          setLogin(true);
-          setLogout(false);
-          }}className='proceed-here'><b>Proceed here</b></Link></li>
+        <button onClick = {handleProceedClick} className='proceed-here'>Proceed here</button>
       </div>
 
 
