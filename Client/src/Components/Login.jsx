@@ -21,6 +21,8 @@ export default function Login() {
       let response = {};
       if (token) {
         alert("You are already Signed In")
+        setLogin(true);
+        setLogout(false);
         navigate("/home");
       }
       else{
