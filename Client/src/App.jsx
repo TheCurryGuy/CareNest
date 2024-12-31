@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
-import { BrowserRouter, Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Login from './Components/Login'
 import Navbar from './Components/Navbar'
 import Signup from './Components/Signup'
@@ -8,6 +7,7 @@ import { StateProvider } from './Context API/StateContext'
 import './App.css'
 import Footer from './Components/Footer'
 import Landing from './Components/Landing'
+import ErrorRoute from './Components/ErrorRoute'
 
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
               <Route path='/login' element = {<Login/>}/>
               <Route path='/Signup' element = {<Signup/>}/>
               <Route path='/home' element = {<Home/>}/>
-              <Route path='*' element = {<ErrorRoute/>}/>
             </Route>
+            <Route path='*' element = {<ErrorRoute/>}/>
           </Routes>
         </BrowserRouter>
       </StateProvider>
@@ -42,23 +42,5 @@ function Layout(){
       </div>
   </>
 }
-
-
-
-
-// function Landing(){
-//   return <div>
-//     Welcome to Landing Page
-//   </div>
-// }
-
-function ErrorRoute(){
-  return <div>
-    No page Available
-  </div>
-}
-
-
-
 
 export default App
