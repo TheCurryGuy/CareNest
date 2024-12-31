@@ -22,8 +22,8 @@ function App() {
               <Route path='/login' element = {<Login/>}/>
               <Route path='/Signup' element = {<Signup/>}/>
               <Route path='/home' element = {<Home/>}/>
+              <Route path='*' element = {<ErrorRoute/>}/>
             </Route>
-            <Route path='*' element = {<ErrorRoute/>}/>
           </Routes>
         </BrowserRouter>
       </StateProvider>
