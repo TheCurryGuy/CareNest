@@ -12,7 +12,7 @@ import About from './Main Content Components/About';
 import Recipe from './Main Content Components/Recipe';
 
 export default function Home() {
-    const { isPost, isTodo, isBMI, isWatch, isMedi, isLogin, isAbout, isRecipe } = useContext(StateContext);
+    const { isPost, isTodo, isBMI, isWatch, isMedi, isAbout, isRecipe } = useContext(StateContext);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
   
@@ -33,7 +33,7 @@ export default function Home() {
               {isBMI && <BMICal/>}
               {isWatch && <PassVault/>}
               {isMedi && <MediReminder/>}
-              {isLogin && <Chatbot/>}
+              <Chatbot/>
               {isRecipe && <Recipe/>}
             </ErrorBoundary>
       </div>
